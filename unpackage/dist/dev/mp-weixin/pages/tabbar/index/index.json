@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "商城",
+  "usingComponents": {
+    "header-search": "/pages/tabbar/index/headerSearch"
+  }
+}
