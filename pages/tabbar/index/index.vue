@@ -1,53 +1,71 @@
 <template>
 	<view class="content">
-		<headerSearch/>
+		<com-navigation />
+		<com-swiper :swiperList="swiperList"/>
+		<com-category :categoryList="categoryList" @to="handleToPageCategory"/>
+		<com-line width="690"/>
+		<com-banner :src="banner"/>
+		<com-title title="优惠活动"></com-title>
+		<com-promotion :data="promotion" @to="handleToPageProm"/>
 	</view>
 </template>
 
 <script>
-	import headerSearch from './headerSearch.vue'
-	export default {
-		components:{
-			headerSearch
+import interfaces from '@/utils/interfaces.js';
+import comNavigation from './comNavigation.vue';
+import comSwiper from './swiper.vue';
+import comCategory from './comCategory.vue';
+import comBanner from './comBanner.vue';
+import comPromotion from './comPromotion.vue';
+import comLine from './comLine.vue';
+import comTitle from '@/components/comTitle/comTitle.vue';
+export default {
+	components: {
+		comNavigation,
+		comSwiper,
+		comCategory,
+		comBanner,
+		comPromotion,
+		comLine,
+		comTitle
+	},
+	data() {
+		return {
+			banner: '/static/img/category/ad.jpg',
+			swiperList: [], //banner
+			categoryList: [], // 分类
+			promotion: [] //优惠活动
+		};
+	},
+	onLoad() {
+		this.initData();
+		
+	},
+	methods: {
+		// 初始化数据
+		async initData() {
+			let res = await this.$request({
+				url: interfaces.getMallData
+			});
+			this.swiperList = res.data.swiperList;
+			this.categoryList = res.data.categoryList;
+			this.promotion = res.data.promotion;
 		},
-		data() {
-			return {
-				title: 'Hello'
-			}
+		handleToPageCategory(item){
+			const id  = item.id;
+			console.log(id);
 		},
-		onLoad() {
-
-		},
-		methods: {
-
+		handleToPageProm(item){
+			console.log(item);
+			uni.showToast({
+				icon:'none',
+				title:item.title
+			})
 		}
 	}
+};
 </script>
 
-<style>
-	.content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin-top: 200rpx;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 50rpx;
-	}
-
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
-
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
-	}
+<style lang="scss">
+	
 </style>

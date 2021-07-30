@@ -92,7 +92,7 @@
   font-size: 12px;
 }
 .headerSearch-search-icon {
-  color: #e1e2e2;
+  color: #c2c1c1;
   position: absolute;
   right: 1em;
   top: 50%;
