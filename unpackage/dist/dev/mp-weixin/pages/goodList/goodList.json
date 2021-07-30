@@ -1,6 +1,6 @@
 {
   "navigationBarTitleText": "",
-  "enablePullDownRefresh": false,
+  "enablePullDownRefresh": true,
   "usingComponents": {
     "com-tab-nav": "/components/comTabNav/comTabNav",
     "com-waterfalls": "/components/comWaterfalls/comWaterfalls"

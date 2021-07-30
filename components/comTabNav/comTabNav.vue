@@ -1,8 +1,13 @@
 <template>
-	<view class="tabNav">
-		<template v-for="item in data">
-			<view class="tabNav-item" @click="handleChangeTab(item)" :class="{ on: item.selected }">{{ item.title }}</view>
-		</template>
+	<view>
+		<view class="tabNav">
+			<template v-for="item in value">
+				<view class="tabNav-item" @click="handleChangeTab(item)" :class="{ on: item.selected }" :key="item.title">{{ item.title }}</view>
+			</template>
+		</view>
+		<view class="place">
+			
+		</view>
 	</view>
 </template>
 
@@ -10,7 +15,7 @@
 export default {
 	name: 'comTabNav',
 	props: {
-		data: {
+		value: {
 			type: Array,
 			default: []
 		}
@@ -20,7 +25,7 @@ export default {
 	},
 	methods:{
 		handleChangeTab(item){
-			const copyData = JSON.parse(JSON.stringify(this.data));
+			const copyData = JSON.parse(JSON.stringify(this.value));
 			copyData.forEach(it=>{
 				if(it.title === item.title){
 					it.selected = true;
@@ -28,7 +33,8 @@ export default {
 					it.selected = false;
 				}
 			})
-			this.$emit('change',{list:copyData, current: item})
+			this.$emit('input',copyData);
+			this.$emit('change',item);
 		}
 	}
 };
@@ -36,10 +42,19 @@ export default {
 
 <style lang="scss" scoped>
 .tabNav {
-	widows: 750rpx;
+	position: fixed;
+	left: 0;
+	top: 0;
+	/* #ifdef H5 */
+	top: var(--window-top);
+	/* #endif */
+	z-index: 19;
+	background: #fff;
+	width: 750rpx;
 	height: 80rpx;
 	display: flex;
 	justify-content: space-between;
+
 	&-item {
 		width: 33.33%;
 		height: 100%;
@@ -63,5 +78,9 @@ export default {
 			}
 		}
 	}
+}
+.place{
+	widows: 750rpx;
+	height: 80rpx;
 }
 </style>

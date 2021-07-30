@@ -122,11 +122,16 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 //
 //
+//
+//
+//
+//
+//
 var _default =
 {
   name: 'comTabNav',
   props: {
-    data: {
+    value: {
       type: Array,
       default: [] } },
 
@@ -136,7 +141,7 @@ var _default =
   },
   methods: {
     handleChangeTab: function handleChangeTab(item) {
-      var copyData = JSON.parse(JSON.stringify(this.data));
+      var copyData = JSON.parse(JSON.stringify(this.value));
       copyData.forEach(function (it) {
         if (it.title === item.title) {
           it.selected = true;
@@ -144,7 +149,8 @@ var _default =
           it.selected = false;
         }
       });
-      this.$emit('change', { list: copyData, current: item });
+      this.$emit('input', copyData);
+      this.$emit('change', item);
     } } };exports.default = _default;
 
 /***/ }),

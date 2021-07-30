@@ -1,7 +1,7 @@
 <template>
 	<view class="water">
 		<template v-for="item in data">
-			<view class="water-item">
+			<view class="water-item" :key="item.id">
 				<image class="water-item-img" :src="item.img" mode="widthFix"></image>
 				<view class="water-item-title">{{item.name}}</view>
 				<view class="water-item-info">

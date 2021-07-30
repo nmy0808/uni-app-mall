@@ -25,7 +25,12 @@
 /* 透明度 */
 /* 文章场景相关 */
 .tabNav.data-v-9817c038 {
-  widows: 750rpx;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 19;
+  background: #fff;
+  width: 750rpx;
   height: 80rpx;
   display: -webkit-box;
   display: -webkit-flex;
@@ -62,5 +67,9 @@
   bottom: 0;
   height: 6rpx;
   background: pink;
+}
+.place.data-v-9817c038 {
+  widows: 750rpx;
+  height: 80rpx;
 }
 
