@@ -1,1 +1,0 @@
-<view class="tabNav data-v-40b44c04"><block wx:for="{{data}}" wx:for-item="item" wx:for-index="__i0__"><view data-event-opts="{{[['tap',[['handleChangeTab',['$0'],[[['data','',__i0__]]]]]]]}}" class="{{['tabNav-item','data-v-40b44c04',(item.selected)?'on':'']}}" bindtap="__e">{{item.title}}</view></block></view>

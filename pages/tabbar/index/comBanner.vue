@@ -9,8 +9,6 @@ export default {
 	name:"comBanner",
 	props: ['src'],
 	created(){
-		console.log(111);
-		console.log(this.src);
 	}
 };
 </script>

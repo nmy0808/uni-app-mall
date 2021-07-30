@@ -105,11 +105,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"components/comNavigation/comNavigation":1,"components/comTitle/comTitle":1,"pages/tabbar/index/comBanner":1,"pages/tabbar/index/comCategory":1,"pages/tabbar/index/comLine":1,"pages/tabbar/index/comPromotion":1,"pages/tabbar/index/swiper":1,"pages/tabbar/category/comSroll":1,"components/comTabNav/comTabNav":1};
+/******/ 		var cssChunks = {"components/comNavigation/comNavigation":1,"components/comTitle/comTitle":1,"pages/tabbar/index/comBanner":1,"pages/tabbar/index/comCategory":1,"pages/tabbar/index/comLine":1,"pages/tabbar/index/comPromotion":1,"pages/tabbar/index/swiper":1,"pages/tabbar/category/comSroll":1,"components/comTabNav/comTabNav":1,"components/comWaterfalls/comWaterfalls":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"components/comNavigation/comNavigation":"components/comNavigation/comNavigation","components/comTitle/comTitle":"components/comTitle/comTitle","pages/tabbar/index/comBanner":"pages/tabbar/index/comBanner","pages/tabbar/index/comCategory":"pages/tabbar/index/comCategory","pages/tabbar/index/comLine":"pages/tabbar/index/comLine","pages/tabbar/index/comPromotion":"pages/tabbar/index/comPromotion","pages/tabbar/index/swiper":"pages/tabbar/index/swiper","pages/tabbar/category/comSroll":"pages/tabbar/category/comSroll","components/comTabNav/comTabNav":"components/comTabNav/comTabNav"}[chunkId]||chunkId) + ".wxss";
+/******/ 				var href = "" + ({"components/comNavigation/comNavigation":"components/comNavigation/comNavigation","components/comTitle/comTitle":"components/comTitle/comTitle","pages/tabbar/index/comBanner":"pages/tabbar/index/comBanner","pages/tabbar/index/comCategory":"pages/tabbar/index/comCategory","pages/tabbar/index/comLine":"pages/tabbar/index/comLine","pages/tabbar/index/comPromotion":"pages/tabbar/index/comPromotion","pages/tabbar/index/swiper":"pages/tabbar/index/swiper","pages/tabbar/category/comSroll":"pages/tabbar/category/comSroll","components/comTabNav/comTabNav":"components/comTabNav/comTabNav","components/comWaterfalls/comWaterfalls":"components/comWaterfalls/comWaterfalls"}[chunkId]||chunkId) + ".wxss";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {

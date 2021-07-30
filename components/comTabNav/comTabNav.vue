@@ -28,7 +28,7 @@ export default {
 					it.selected = false;
 				}
 			})
-			this.$emit('change',copyData)
+			this.$emit('change',{list:copyData, current: item})
 		}
 	}
 };

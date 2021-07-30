@@ -1,1 +1,1 @@
-<view><com-tab-nav vue-id="0bd94ce0-1" data="{{tabList}}" data-event-opts="{{[['^change',[['handleChangeTab']]]]}}" bind:change="__e" bind:__l="__l"></com-tab-nav></view>
+<view><com-tab-nav vue-id="0bd94ce0-1" data="{{tabList}}" data-event-opts="{{[['^change',[['handleChangeTab']]]]}}" bind:change="__e" bind:__l="__l"></com-tab-nav><com-waterfalls vue-id="0bd94ce0-2" data="{{currentList}}" bind:__l="__l"></com-waterfalls></view>

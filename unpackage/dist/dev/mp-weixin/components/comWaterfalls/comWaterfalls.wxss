@@ -24,79 +24,61 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.headerSearch-outter {
-  width: 750rpx;
+.water.data-v-1bc67a4a {
+  padding-top: 1em;
+  width: 690rpx;
+  margin: 0 auto;
+  -webkit-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: 1em;
+          column-gap: 1em;
 }
-.headerSearch {
-  position: fixed;
-  top: 0;
-  left: 0;
+.water-item.data-v-1bc67a4a {
+  overflow: hidden;
+  margin-bottom: 1em;
+  -webkit-column-break-inside: avoid;
+          break-inside: avoid;
+  width: 320rpx;
+  border-radius: 20rpx;
+  -webkit-box-shadow: 0rpx 5rpx 25rpx rgba(0, 0, 0, 0.1);
+          box-shadow: 0rpx 5rpx 25rpx rgba(0, 0, 0, 0.1);
+}
+.water-item-img.data-v-1bc67a4a {
+  width: 100%;
+}
+.water-item-title.data-v-1bc67a4a {
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  font-size: 30rpx;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  padding: 0 0.5em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.water-item-info.data-v-1bc67a4a {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
-  height: 50px;
-  width: 750rpx;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
           justify-content: space-between;
-}
-.headerSearch-city {
-  width: 18%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
   -webkit-box-align: center;
   -webkit-align-items: center;
           align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-          justify-content: center;
-}
-.headerSearch-city-icon {
-  color: #fec10d;
-}
-.headerSearch-city-text {
-  font-size: 12px;
-}
-.headerSearch-msg {
-  width: 10%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-          justify-content: center;
-}
-.headerSearch-search {
-  position: relative;
-  width: 72%;
-  height: 30px;
-  border-radius: 30px;
-  overflow: hidden;
-}
-.headerSearch-search-inp {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background: #f5f5f4;
-  padding: 0 1em;
+  padding: 0.5em;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-size: 12px;
 }
-.headerSearch-search-icon {
-  color: #c2c1c1;
-  position: absolute;
-  right: 1em;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+.water-item-info-price.data-v-1bc67a4a {
+  color: red;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.water-item-info-count.data-v-1bc67a4a {
+  color: #74707c;
+  font-size: 16rpx;
 }
 
