@@ -91,6 +91,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components
+try {
+  components = {
+    comNavigation: function() {
+      return __webpack_require__.e(/*! import() | components/comNavigation/comNavigation */ "components/comNavigation/comNavigation").then(__webpack_require__.bind(null, /*! @/components/comNavigation/comNavigation.vue */ 37))
+    }
+  }
+} catch (e) {
+  if (
+    e.message.indexOf("Cannot find module") !== -1 &&
+    e.message.indexOf(".vue") !== -1
+  ) {
+    console.error(e.message)
+    console.error("1. 排查组件名称拼写是否正确")
+    console.error(
+      "2. 排查组件是否符合 easycom 规范，文档：https://uniapp.dcloud.net.cn/collocation/pages?id=easycom"
+    )
+    console.error(
+      "3. 若组件不符合 easycom 规范，需手动引入，并在 components 中注册该组件"
+    )
+  } else {
+    throw e
+  }
+}
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -128,20 +151,39 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-var _default =
-{
-  data: function data() {
-    return {};
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 49));
 
+
+
+
+
+
+
+
+var _interfaces = _interopRequireDefault(__webpack_require__(/*! @/utils/interfaces.js */ 48));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var comNavigation = function comNavigation() {__webpack_require__.e(/*! require.ensure | components/comNavigation/comNavigation */ "components/comNavigation/comNavigation").then((function () {return resolve(__webpack_require__(/*! @/components/comNavigation/comNavigation */ 37));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var comScroll = function comScroll() {__webpack_require__.e(/*! require.ensure | pages/tabbar/category/comSroll */ "pages/tabbar/category/comSroll").then((function () {return resolve(__webpack_require__(/*! ./comSroll.vue */ 97));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
+{
+  components: { comNavigation: comNavigation, comScroll: comScroll },
+  data: function data() {
+    return {
+      categoryList: [],
+      scrollHeight: 0 };
 
   },
-  methods: {} };exports.default = _default;
+  methods: {
+    initData: function initData() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
+                  _this.$request({
+                    url: _interfaces.default.getCategory }));case 2:res = _context.sent;
+
+                _this.categoryList = res.data;case 4:case "end":return _context.stop();}}}, _callee);}))();
+    },
+    handleToPageDetail: function handleToPageDetail(item) {
+      console.log(item);
+    } },
+
+  onLoad: function onLoad() {
+    this.initData();
+  } };exports.default = _default;
 
 /***/ })
 

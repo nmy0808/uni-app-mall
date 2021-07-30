@@ -1,0 +1,1 @@
+<view class="category"><block wx:for="{{data}}" wx:for-item="it" wx:for-index="__i0__" wx:key="id"><view data-event-opts="{{[['tap',[['handleToPage',['$0'],[[['data','id',it.id]]]]]]]}}" class="category-item" bindtap="__e"><image class="category-item-img" src="{{it.img}}" mode="aspectFill"></image><view class="category-item-text">{{it.name}}</view></view></block></view>

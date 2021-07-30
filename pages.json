@@ -14,7 +14,11 @@
 			"path": "pages/tabbar/category/category",
 			"style": {
 				"navigationBarTitleText": "分类",
-				"enablePullDownRefresh": false
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView":false,
+					"bounce": "none"
+				}
 			}
 		},
 		{

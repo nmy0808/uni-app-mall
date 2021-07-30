@@ -1,0 +1,1 @@
+<view class="banner"><image class="banner-img" src="{{src}}" mode="aspectFill"></image></view>

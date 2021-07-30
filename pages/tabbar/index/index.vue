@@ -1,8 +1,8 @@
 <template>
 	<view class="content">
 		<com-navigation />
-		<com-swiper :swiperList="swiperList"/>
-		<com-category :categoryList="categoryList" @to="handleToPageCategory"/>
+		<com-swiper :data="swiperList"/>
+		<com-category :data="categoryList" @to="handleToPageCategory"/>
 		<com-line width="690"/>
 		<com-banner :src="banner"/>
 		<com-title title="优惠活动"></com-title>
@@ -12,7 +12,7 @@
 
 <script>
 import interfaces from '@/utils/interfaces.js';
-import comNavigation from './comNavigation.vue';
+import comNavigation from '@/components/comNavigation/comNavigation';
 import comSwiper from './swiper.vue';
 import comCategory from './comCategory.vue';
 import comBanner from './comBanner.vue';

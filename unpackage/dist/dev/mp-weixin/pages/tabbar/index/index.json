@@ -1,7 +1,7 @@
 {
   "navigationBarTitleText": "商城",
   "usingComponents": {
-    "com-navigation": "/pages/tabbar/index/comNavigation",
+    "com-navigation": "/components/comNavigation/comNavigation",
     "com-swiper": "/pages/tabbar/index/swiper",
     "com-category": "/pages/tabbar/index/comCategory",
     "com-banner": "/pages/tabbar/index/comBanner",
