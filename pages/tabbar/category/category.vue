@@ -25,7 +25,9 @@ export default {
 			this.categoryList = res.data;
 		},
 		handleToPageDetail(item){
-			console.log(item);
+			uni.navigateTo({
+				url: '/pages/goodList/goodList?name='+ item.name
+			})
 		}
 	},
 	onLoad() {

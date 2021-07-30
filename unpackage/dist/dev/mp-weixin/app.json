@@ -3,7 +3,8 @@
     "pages/tabbar/index/index",
     "pages/tabbar/category/category",
     "pages/tabbar/user/user",
-    "pages/tabbar/cart/cart"
+    "pages/tabbar/cart/cart",
+    "pages/goodList/goodList"
   ],
   "subPackages": [],
   "window": {

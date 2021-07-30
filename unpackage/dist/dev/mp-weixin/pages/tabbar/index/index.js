@@ -187,8 +187,9 @@ var _interfaces = _interopRequireDefault(__webpack_require__(/*! @/utils/interfa
                 _this.promotion = res.data.promotion;case 6:case "end":return _context.stop();}}}, _callee);}))();
     },
     handleToPageCategory: function handleToPageCategory(item) {
-      var id = item.id;
-      console.log(id);
+      uni.navigateTo({
+        url: '/pages/goodList/goodList?name=' + item.name });
+
     },
     handleToPageProm: function handleToPageProm(item) {
       console.log(item);

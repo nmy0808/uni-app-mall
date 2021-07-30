@@ -37,7 +37,16 @@
 			}
 
 		}
-	],
+	    ,{
+            "path" : "pages/goodList/goodList",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",

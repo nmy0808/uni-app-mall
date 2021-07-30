@@ -52,8 +52,9 @@ export default {
 			this.promotion = res.data.promotion;
 		},
 		handleToPageCategory(item){
-			const id  = item.id;
-			console.log(id);
+			uni.navigateTo({
+				url: '/pages/goodList/goodList?name='+ item.name
+			})
 		},
 		handleToPageProm(item){
 			console.log(item);

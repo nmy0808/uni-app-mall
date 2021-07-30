@@ -151,7 +151,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 49));
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 49));
 
 
 
@@ -178,12 +178,15 @@ var _interfaces = _interopRequireDefault(__webpack_require__(/*! @/utils/interfa
                 _this.categoryList = res.data;case 4:case "end":return _context.stop();}}}, _callee);}))();
     },
     handleToPageDetail: function handleToPageDetail(item) {
-      console.log(item);
+      uni.navigateTo({
+        url: '/pages/goodList/goodList?name=' + item.name });
+
     } },
 
   onLoad: function onLoad() {
     this.initData();
   } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ })
 

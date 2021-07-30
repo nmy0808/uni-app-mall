@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "com-tab-nav": "/components/comTabNav/comTabNav"
+  }
+}
