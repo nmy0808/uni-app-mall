@@ -1,1 +1,1 @@
-<view></view>
+<view><block wx:if="{{currentViedoPath&&isShowVideo}}"><video id="myvideo" autoplay="{{true}}" src="{{currentViedoPath}}" controls="{{true}}" data-event-opts="{{[['fullscreenchange',[['handleCancelFullScreen',['$event']]]]]}}" muted="{{true}}" bindfullscreenchange="__e"></video></block><button type="default" data-event-opts="{{[['tap',[['paly',['$event']]]]]}}" bindtap="__e">播放</button></view>

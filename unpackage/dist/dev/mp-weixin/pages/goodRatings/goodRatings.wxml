@@ -1,1 +1,1 @@
-<view class="goodRatings"><com-tag vue-id="c02b2968-1" data="{{labelList}}" bind:__l="__l"></com-tag></view>
+<view class="goodRatings"><com-tag vue-id="c02b2968-1" data="{{labelList}}" bind:__l="__l"></com-tag><com-comment-list vue-id="c02b2968-2" data="{{comments}}" bind:__l="__l"></com-comment-list></view>

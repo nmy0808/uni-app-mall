@@ -6,6 +6,8 @@
     "com-swiper": "/pages/goodDetail/comSwiper",
     "com-good-title": "/pages/goodDetail/comGoodTitle",
     "com-good-select": "/pages/goodDetail/comGoodSelect",
-    "com-comment": "/pages/goodDetail/comComment"
+    "com-comment": "/pages/goodDetail/comComment",
+    "com-good-desc": "/pages/goodDetail/comGoodDesc",
+    "com-good-nav": "/pages/goodDetail/comGoodNav"
   }
 }

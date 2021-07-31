@@ -2,6 +2,7 @@
   "navigationBarTitleText": "商品评论",
   "enablePullDownRefresh": false,
   "usingComponents": {
-    "com-tag": "/pages/goodRatings/comTag"
+    "com-tag": "/pages/goodRatings/comTag",
+    "com-comment-list": "/pages/goodRatings/comCommentList"
   }
 }

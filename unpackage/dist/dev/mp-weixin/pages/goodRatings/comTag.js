@@ -45,7 +45,7 @@ component.options.__file = "pages/goodRatings/comTag.vue"
 /*!**********************************************************************************************************************!*\
   !*** /Users/nmy/code/uni-demo1/uni-app-mall/pages/goodRatings/comTag.vue?vue&type=template&id=0d93aee8&scoped=true& ***!
   \**********************************************************************************************************************/
-/*! no static exports found */
+/*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

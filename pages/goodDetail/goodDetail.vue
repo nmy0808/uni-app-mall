@@ -1,10 +1,12 @@
 <template>
 	<view class="goodDetail">
 		<comNavigationBack />
-		<comSwiper :data="pageData.swiperList" v-if="pageData.swiperList.length > 0" />
+		<comSwiper :data="pageData.swiperList"  />
 		<comGoodTitle :data="info"/>
 		<comGoodSelect :data="info" :selectList="pageData.spec" @changeSelect="handleChangeSelected" @changeNum="handleChangeNum"/>
 		<comComment :data="pageData.comment"/>
+		<comGoodDesc :data="pageData.descriptionStr"/>
+		<comGoodNav v-model="goodStatus"/>
 	</view>
 </template>
 
@@ -14,9 +16,11 @@ import comSwiper from './comSwiper.vue';
 import comGoodTitle from './comGoodTitle.vue'
 import comGoodSelect from './comGoodSelect.vue'
 import comComment from './comComment.vue'
+import comGoodDesc from './comGoodDesc.vue'
+import comGoodNav from './comGoodNav.vue'
 export default {
 	name: 'goodDetail',
-	components: { comSwiper ,comGoodTitle, comGoodSelect,comComment},
+	components: { comSwiper ,comGoodTitle, comGoodSelect,comComment, comGoodDesc,comGoodNav},
 	data() {
 		return {
 			info: {},
@@ -24,7 +28,11 @@ export default {
 				comment: [],
 				descriptionStr: '',
 				spec: [],
-				swiperList: []
+				swiperList: [],
+			},
+			goodStatus:{
+				share:false,
+				coolect:false,
 			}
 		};
 	},

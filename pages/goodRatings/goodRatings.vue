@@ -1,14 +1,16 @@
 <template>
 	<view class="goodRatings">
 		<comTag :data="labelList"/>
+		<comCommentList :data="comments"/>
 	</view>
 </template>
 
 <script>
 	import comTag from './comTag.vue'
+	import comCommentList from './comCommentList.vue'
 	export default {
 		name:"goodRatings",
-		components:{comTag},
+		components:{comTag,comCommentList},
 		data() {
 			return {
 				comments:[],
@@ -53,7 +55,6 @@
 		methods:{
 			infoDataComments(){
 				this.comments = uni.getStorageSync('comments');
-				console.log(this.comments);
 			}
 		},
 		onLoad() {
