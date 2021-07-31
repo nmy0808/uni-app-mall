@@ -4,7 +4,8 @@
     "pages/tabbar/category/category",
     "pages/tabbar/user/user",
     "pages/tabbar/cart/cart",
-    "pages/goodList/goodList"
+    "pages/goodList/goodList",
+    "pages/goodDetail/goodDetail"
   ],
   "subPackages": [],
   "window": {
@@ -44,6 +45,5 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap.json"
+  "usingComponents": {}
 }

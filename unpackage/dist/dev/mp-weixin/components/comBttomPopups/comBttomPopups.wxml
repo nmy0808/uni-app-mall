@@ -1,0 +1,1 @@
+<view hidden="{{!(show)}}" class="comBttomPopups"><view class="comBttomPopups-main scale-down-ver-bottom"><slot></slot></view><view data-event-opts="{{[['tap',[['handleClose',['$event']]]]]}}" class="comBttomPopups-mask" catchtap="__e"></view></view>

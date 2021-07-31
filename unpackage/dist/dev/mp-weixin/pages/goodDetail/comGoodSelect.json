@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "com-bttom-popups": "/components/comBttomPopups/comBttomPopups",
+    "com-counter": "/components/comCounter/comCounter"
+  },
+  "component": true
+}

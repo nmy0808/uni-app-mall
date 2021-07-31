@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<comTabNav v-model="tabList" @change="handleChangeTab" />
-		<comWaterfalls :data="currentList" />
+		<comWaterfalls :data="currentList" @to="handleToPageDetail"/>
 		<view class="loadingText">
 			{{loadingText}}
 		</view>
@@ -47,6 +47,11 @@ export default {
 			this.currentList = [];
 			this.currentfilterby = current.filterby;
 			await this.loadCurrentList();
+		},
+		handleToPageDetail(item){
+			uni.navigateTo({
+				url:`/pages/goodDetail/goodDetail?info=`+JSON.stringify(item)
+			})
 		}
 	},
 	onLoad({ name }) {

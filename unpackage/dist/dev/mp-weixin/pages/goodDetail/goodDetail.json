@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "com-navigation-back": "/components/comNavigationBack/comNavigationBack",
+    "com-swiper": "/pages/goodDetail/comSwiper",
+    "com-good-title": "/pages/goodDetail/comGoodTitle",
+    "com-good-select": "/pages/goodDetail/comGoodSelect"
+  }
+}

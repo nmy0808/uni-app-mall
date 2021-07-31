@@ -5,7 +5,7 @@
 			"style": {
 				"navigationBarTitleText": "商城",
 				"app-plus": {
-					"titleNView":false,
+					"titleNView": false,
 					"bounce": "none"
 				}
 			}
@@ -16,7 +16,7 @@
 				"navigationBarTitleText": "分类",
 				"enablePullDownRefresh": false,
 				"app-plus": {
-					"titleNView":false,
+					"titleNView": false,
 					"bounce": "none"
 				}
 			}
@@ -36,17 +36,26 @@
 				"enablePullDownRefresh": false
 			}
 
+		}, {
+			"path": "pages/goodList/goodList",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": true
+			}
+
+		}, {
+			"path": "pages/goodDetail/goodDetail",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false,
+					"bounce": "none"
+				}
+			}
+
 		}
-	    ,{
-            "path" : "pages/goodList/goodList",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": true
-            }
-            
-        }
-    ],
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",

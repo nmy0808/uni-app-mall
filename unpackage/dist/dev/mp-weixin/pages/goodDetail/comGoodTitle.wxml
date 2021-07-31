@@ -1,0 +1,1 @@
+<view class="goodTitle data-v-a4a3f79c"><view class="goodTitle-price data-v-a4a3f79c">{{'¥'+data.price+''}}</view><view class="goodTitle-name data-v-a4a3f79c">{{''+data.name+''}}</view></view>

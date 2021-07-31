@@ -1,7 +1,7 @@
 <template>
 	<view class="water">
 		<template v-for="item in data">
-			<view class="water-item" :key="item.id">
+			<view class="water-item" :key="item.goods_id" @click="handToPage(item)">
 				<image class="water-item-img" :src="item.img" mode="widthFix"></image>
 				<view class="water-item-title">{{item.name}}</view>
 				<view class="water-item-info">
@@ -20,6 +20,11 @@
 			data:{
 				type:Array,
 				default:()=>([])
+			}
+		},
+		methods:{
+			handToPage(item){
+				this.$emit('to',item);
 			}
 		}
 	}

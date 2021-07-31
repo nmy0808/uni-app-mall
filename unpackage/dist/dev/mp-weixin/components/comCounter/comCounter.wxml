@@ -1,0 +1,1 @@
+<view class="comCounter"><view data-event-opts="{{[['tap',[['handleSub',['$event']]]]]}}" class="comCounter-sub btn" bindtap="__e">-</view><view class="comCounter-num">{{''+value.number+''}}</view><view data-event-opts="{{[['tap',[['handleAdd',['$event']]]]]}}" class="comCounter-add btn" bindtap="__e">+</view></view>
