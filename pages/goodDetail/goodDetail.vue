@@ -6,7 +6,7 @@
 		<comGoodSelect :data="info" :selectList="pageData.spec" @changeSelect="handleChangeSelected" @changeNum="handleChangeNum"/>
 		<comComment :data="pageData.comment"/>
 		<comGoodDesc :data="pageData.descriptionStr"/>
-		<comGoodNav v-model="goodStatus"/>
+		<comGoodNav v-model="goodStatus" :info="info"/>
 	</view>
 </template>
 

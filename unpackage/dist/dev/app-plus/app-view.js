@@ -6692,7 +6692,7 @@ __webpack_require__.r(__webpack_exports__);
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default =
 
 {
-  name: "comGoodNav", props: ["value"],
+  name: "comGoodNav", props: ["value", "info"],
   data: function data() {
     return {
       wxsProps: {} };

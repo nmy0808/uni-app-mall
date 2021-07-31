@@ -114,7 +114,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
 //
 //
 //
@@ -136,7 +136,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 var _default =
 {
   name: 'comGoodNav',
-  props: { value: Object },
+  props: { value: Object, info: Object },
   methods: {
     handleShare: function handleShare() {
       var copyJson = JSON.parse(JSON.stringify(this.value));
@@ -146,16 +146,39 @@ var _default =
     },
     handleCoolect: function handleCoolect() {
       var copyJson = JSON.parse(JSON.stringify(this.value));
+      var title = '取消收藏';
       copyJson.coolect = !copyJson.coolect;
+      copyJson.coolect && (title = '已收藏');
+      uni.showToast({
+        icon: 'success',
+        title: title });
+
       this.$emit('coolect');
       this.$emit('input', copyJson);
     },
-    handleCart: function handleCart() {
-      this.$emit('cart');
+    handleCart: function handleCart() {var _this = this;
+      var cartData = uni.getStorageSync('cart');
+      if (!Array.isArray(cartData)) {
+        cartData = [];
+        cartData.push(this.info);
+      } else {
+        var res = cartData.find(function (it) {return it.goods_id === _this.info.goods_id && it.spec === _this.info.spec;});
+        if (res) {
+          res.number += this.info.number;
+        } else {
+          cartData.push(this.info);
+        }
+      }
+      this.setStoreCart(cartData);
+      this.$emit('cart', cartData);
     },
     handleBuy: function handleBuy() {
       this.$emit('buy');
+    },
+    setStoreCart: function setStoreCart(data) {
+      uni.setStorageSync('cart', data);
     } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 

@@ -1,13 +1,13 @@
 <template>
 	<view class="comGoodNav">
 		<view class="comGoodNav-left">
-			<view class="comGoodNav-left-share comGoodNav-left-item" :class="{on:value.share}" @click="handleShare">
+			<view class="comGoodNav-left-share comGoodNav-left-item" :class="{ on: value.share }" @click="handleShare">
 				<view class="iconfont">&#xe7e0;</view>
 				分享
 			</view>
-			<view class="comGoodNav-left-coolect comGoodNav-left-item" :class="{on:value.coolect}" @click="handleCoolect">
+			<view class="comGoodNav-left-coolect comGoodNav-left-item" :class="{ on: value.coolect }" @click="handleCoolect">
 				<view class="iconfont">&#xe64c;</view>
-				{{value.coolect?'已':''}}收藏
+				{{ value.coolect ? '已' : '' }}收藏
 			</view>
 		</view>
 		<view class="comGoodNav-right">
@@ -20,25 +20,47 @@
 <script>
 export default {
 	name: 'comGoodNav',
-	props:{value:Object},
+	props: { value: Object, info: Object },
 	methods: {
 		handleShare() {
 			const copyJson = JSON.parse(JSON.stringify(this.value));
 			copyJson.share = !copyJson.share;
 			this.$emit('share');
-			this.$emit('input',copyJson);
+			this.$emit('input', copyJson);
 		},
 		handleCoolect() {
 			const copyJson = JSON.parse(JSON.stringify(this.value));
+			let title = '取消收藏';
 			copyJson.coolect = !copyJson.coolect;
+			copyJson.coolect && (title = '已收藏');
+			uni.showToast({
+				icon: 'success',
+				title
+			});
 			this.$emit('coolect');
-			this.$emit('input',copyJson);
+			this.$emit('input', copyJson);
 		},
 		handleCart() {
-			this.$emit('cart');
+			let cartData = uni.getStorageSync('cart');
+			if (!Array.isArray(cartData)) {
+				cartData = [];
+				cartData.push(this.info);
+			} else {
+				const res = cartData.find(it => it.goods_id === this.info.goods_id && it.spec === this.info.spec);
+				if (res) {
+					res.number += this.info.number;
+				} else {
+					cartData.push(this.info);
+				}
+			}
+			this.setStoreCart(cartData);
+			this.$emit('cart', cartData);
 		},
 		handleBuy() {
 			this.$emit('buy');
+		},
+		setStoreCart(data) {
+			uni.setStorageSync('cart', data);
 		}
 	}
 };
@@ -68,7 +90,7 @@ export default {
 				font-size: 20px;
 			}
 		}
-		&-coolect.on{
+		&-coolect.on {
 			color: #db5568;
 		}
 	}
