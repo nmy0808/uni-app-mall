@@ -3,8 +3,8 @@
 		<comNavigationBack />
 		<comSwiper :data="pageData.swiperList" v-if="pageData.swiperList.length > 0" />
 		<comGoodTitle :data="info"/>
-		<comGoodSelect :data="info" :selectList="pageData.spec" :pageData="pageData"/>
-		
+		<comGoodSelect :data="info" :selectList="pageData.spec" @changeSelect="handleChangeSelected" @changeNum="handleChangeNum"/>
+		<comComment :data="pageData.comment"/>
 	</view>
 </template>
 
@@ -13,9 +13,10 @@ import interfaces from '@/utils/interfaces.js';
 import comSwiper from './comSwiper.vue';
 import comGoodTitle from './comGoodTitle.vue'
 import comGoodSelect from './comGoodSelect.vue'
+import comComment from './comComment.vue'
 export default {
 	name: 'goodDetail',
-	components: { comSwiper ,comGoodTitle, comGoodSelect},
+	components: { comSwiper ,comGoodTitle, comGoodSelect,comComment},
 	data() {
 		return {
 			info: {},
@@ -41,6 +42,12 @@ export default {
 				url: interfaces.getGoods
 			});
 			this.pageData = res.data;
+		},
+		handleChangeSelected(spec){
+			this.info.spec= spec;
+		},
+		handleChangeNum(num){
+			this.info.number = num;
 		}
 	},
 	onLoad(opt) {

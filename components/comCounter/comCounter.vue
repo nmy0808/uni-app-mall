@@ -4,7 +4,7 @@
 			-
 		</view>
 		<view class="comCounter-num">
-			{{value.number}}
+			{{num}}
 		</view>
 		<view class="comCounter-add btn" @click="handleAdd">
 			+
@@ -16,16 +16,16 @@
 	export default {
 		name:"comCounter",
 		props:{
-			value:Object
+			num:[String,Number]
 		},
 		methods:{
 			handleSub(){
-				if(this.value.number===1)return;
-				this.value.number --;
+				if(this.num===1)return;
+				this.$emit('change',this.num-1)
 			},
 			handleAdd(){
-				if(this.value.number===99)return;
-				this.value.number ++;
+				if(this.num===99)return;
+				this.$emit('change',this.num+1)
 			}
 		}
 	}

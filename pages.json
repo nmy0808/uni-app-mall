@@ -55,7 +55,16 @@
 			}
 
 		}
-	],
+	    ,{
+            "path" : "pages/goodRatings/goodRatings",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",

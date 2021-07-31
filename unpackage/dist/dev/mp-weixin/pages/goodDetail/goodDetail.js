@@ -162,13 +162,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _interfaces = _interopRequireDefault(__webpack_require__(/*! @/utils/interfaces.js */ 21));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var comSwiper = function comSwiper() {__webpack_require__.e(/*! require.ensure | pages/goodDetail/comSwiper */ "pages/goodDetail/comSwiper").then((function () {return resolve(__webpack_require__(/*! ./comSwiper.vue */ 131));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var comGoodTitle = function comGoodTitle() {__webpack_require__.e(/*! require.ensure | pages/goodDetail/comGoodTitle */ "pages/goodDetail/comGoodTitle").then((function () {return resolve(__webpack_require__(/*! ./comGoodTitle.vue */ 152));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var comGoodSelect = function comGoodSelect() {__webpack_require__.e(/*! require.ensure | pages/goodDetail/comGoodSelect */ "pages/goodDetail/comGoodSelect").then((function () {return resolve(__webpack_require__(/*! ./comGoodSelect.vue */ 160));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+var _interfaces = _interopRequireDefault(__webpack_require__(/*! @/utils/interfaces.js */ 21));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var comSwiper = function comSwiper() {__webpack_require__.e(/*! require.ensure | pages/goodDetail/comSwiper */ "pages/goodDetail/comSwiper").then((function () {return resolve(__webpack_require__(/*! ./comSwiper.vue */ 131));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var comGoodTitle = function comGoodTitle() {__webpack_require__.e(/*! require.ensure | pages/goodDetail/comGoodTitle */ "pages/goodDetail/comGoodTitle").then((function () {return resolve(__webpack_require__(/*! ./comGoodTitle.vue */ 138));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var comGoodSelect = function comGoodSelect() {__webpack_require__.e(/*! require.ensure | pages/goodDetail/comGoodSelect */ "pages/goodDetail/comGoodSelect").then((function () {return resolve(__webpack_require__(/*! ./comGoodSelect.vue */ 145));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var comComment = function comComment() {__webpack_require__.e(/*! require.ensure | pages/goodDetail/comComment */ "pages/goodDetail/comComment").then((function () {return resolve(__webpack_require__(/*! ./comComment.vue */ 184));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
 
 
 
 {
   name: 'goodDetail',
-  components: { comSwiper: comSwiper, comGoodTitle: comGoodTitle, comGoodSelect: comGoodSelect },
+  components: { comSwiper: comSwiper, comGoodTitle: comGoodTitle, comGoodSelect: comGoodSelect, comComment: comComment },
   data: function data() {
     return {
       info: {},
@@ -194,6 +195,12 @@ var _interfaces = _interopRequireDefault(__webpack_require__(/*! @/utils/interfa
                     url: _interfaces.default.getGoods }));case 2:res = _context.sent;
 
                 _this.pageData = res.data;case 4:case "end":return _context.stop();}}}, _callee);}))();
+    },
+    handleChangeSelected: function handleChangeSelected(spec) {
+      this.info.spec = spec;
+    },
+    handleChangeNum: function handleChangeNum(num) {
+      this.info.number = num;
     } },
 
   onLoad: function onLoad(opt) {

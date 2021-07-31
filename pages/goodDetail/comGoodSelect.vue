@@ -25,7 +25,7 @@
 					<view class="slot-popup-select-item" 
 						@click="handleChangeSelect(item)"	
 						:class="{on:item === data.spec}" 
-						v-for="item in pageData.spec" 
+						v-for="item in selectList" 
 						:key="item">
 						{{ item }}
 					</view>
@@ -35,7 +35,7 @@
 						数量
 					</view>
 					<view class="slot-popup-length-counter">
-						<comCounter v-model="data" />
+						<comCounter :num="data.number" @change="handleChangeNum"/>
 					</view>
 				</view>
 				<button class="slot-popup-button" type="default" @click.stop="handleClosePopup">确定</button>
@@ -46,16 +46,19 @@
 
 <script>
 export default {
-	props: { data: Object, selectList: Array ,pageData:Object},
+	props: { data: Object, selectList: Array},
 	methods:{
 		handleOpenPopup(){
 			this.$refs.popup.open();
 		},
 		handleChangeSelect(item){
-			this.data.spec = item;
+			this.$emit('changeSelect',item)
 		},
 		handleClosePopup(){
 			this.$refs.popup.close();
+		},
+		handleChangeNum(num){
+			this.$emit('changeNum',num);
 		}
 	}
 };
@@ -76,7 +79,7 @@ export default {
 		}
 		&-right{
 			&-title{
-				font-size: 26rpx;
+				font-size: 22rpx;
 				padding: 4rpx 0;
 			}
 			&-selectBox{

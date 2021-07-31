@@ -5,7 +5,8 @@
     "pages/tabbar/user/user",
     "pages/tabbar/cart/cart",
     "pages/goodList/goodList",
-    "pages/goodDetail/goodDetail"
+    "pages/goodDetail/goodDetail",
+    "pages/goodRatings/goodRatings"
   ],
   "subPackages": [],
   "window": {
