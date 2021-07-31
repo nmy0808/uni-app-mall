@@ -1,14 +1,14 @@
 <template>
-	<view class="comComment">
+	<view class="comComment" v-if="data.length>0">
 		<view class="comComment-header">
 			<view class="comComment-header-title">
 				商品评价({{data.length}})
 			</view>
-			<view class="comComment-header-move">
+			<view class="comComment-header-move" @click="handleGoPageRating">
 				查看全部 >
 			</view>
 		</view>
-		<view class="comComment-main">
+		<view class="comComment-main" @click="handleGoPageRating">
 			<view class="comComment-main-item">
 				<view class="comComment-main-item-header">
 					<image :src="calcOneComment.face" class="comComment-main-item-header-avatar"></image>
@@ -30,8 +30,18 @@
 		props:{data:Array},
 		computed:{
 			calcOneComment(){
-				console.log( this.data[0]);
 				return this.data[0];
+			}
+		},
+		methods:{
+			handleGoPageRating(){
+				uni.setStorage({
+					key: 'comments',
+					data: this.data
+				})
+				uni.navigateTo({
+					url: '../goodRatings/goodRatings'
+				})
 			}
 		}
 	}

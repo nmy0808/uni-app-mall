@@ -1,1 +1,1 @@
-<view class="goodRatings"></view>
+<view class="goodRatings"><com-tag vue-id="c02b2968-1" data="{{labelList}}" bind:__l="__l"></com-tag></view>

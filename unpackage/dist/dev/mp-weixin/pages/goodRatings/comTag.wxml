@@ -1,0 +1,1 @@
+<view class="comTag data-v-0d93aee8"><block wx:for="{{data}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view data-event-opts="{{[['tap',[['handleChangeTag',[index]]]]]}}" class="{{['comTag-item','data-v-0d93aee8',(currentIndex===index)?'on':'']}}" bindtap="__e">{{''+item.name+"("+item.number+')'}}</view></block></view>

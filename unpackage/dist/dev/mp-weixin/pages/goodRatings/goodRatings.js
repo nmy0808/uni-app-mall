@@ -128,20 +128,68 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var comTag = function comTag() {__webpack_require__.e(/*! require.ensure | pages/goodRatings/comTag */ "pages/goodRatings/comTag").then((function () {return resolve(__webpack_require__(/*! ./comTag.vue */ 198));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
+
+
+
+
+
+
 {
   name: "goodRatings",
+  components: { comTag: comTag },
   data: function data() {
-    return {};
+    return {
+      comments: [],
+      labelList: [{
+        name: '全部',
+        number: 25,
+        type: 'all' },
+
+      {
+        name: '好评',
+        number: 23,
+        type: 'good' },
+
+      {
+        name: '中评',
+        number: 1,
+        type: 'secondary' },
+
+      {
+        name: '差评',
+        number: 1,
+        type: 'poor' },
+
+      {
+        name: '有图',
+        number: 12,
+        type: 'img' },
+
+      {
+        name: '视频',
+        number: 2,
+        type: 'video' },
+
+      {
+        name: '追加',
+        number: 2,
+        type: 'append' }] };
 
 
+
+  },
+  methods: {
+    infoDataComments: function infoDataComments() {
+      this.comments = uni.getStorageSync('comments');
+      console.log(this.comments);
+    } },
+
+  onLoad: function onLoad() {
+    this.infoDataComments();
   } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ })
 
