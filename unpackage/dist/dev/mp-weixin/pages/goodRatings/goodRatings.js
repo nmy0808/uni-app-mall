@@ -128,7 +128,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var comTag = function comTag() {__webpack_require__.e(/*! require.ensure | pages/goodRatings/comTag */ "pages/goodRatings/comTag").then((function () {return resolve(__webpack_require__(/*! ./comTag.vue */ 198));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var comCommentList = function comCommentList() {__webpack_require__.e(/*! require.ensure | pages/goodRatings/comCommentList */ "pages/goodRatings/comCommentList").then((function () {return resolve(__webpack_require__(/*! ./comCommentList.vue */ 206));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var comTag = function comTag() {__webpack_require__.e(/*! require.ensure | pages/goodRatings/comTag */ "pages/goodRatings/comTag").then((function () {return resolve(__webpack_require__(/*! ./comTag.vue */ 186));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var comCommentList = function comCommentList() {__webpack_require__.e(/*! require.ensure | pages/goodRatings/comCommentList */ "pages/goodRatings/comCommentList").then((function () {return resolve(__webpack_require__(/*! ./comCommentList.vue */ 193));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 

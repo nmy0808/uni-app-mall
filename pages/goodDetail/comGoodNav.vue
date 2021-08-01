@@ -55,6 +55,9 @@ export default {
 			}
 			this.setStoreCart(cartData);
 			this.$emit('cart', cartData);
+			uni.showToast({
+				title:'购物车添加成功'
+			})
 		},
 		handleBuy() {
 			this.$emit('buy');

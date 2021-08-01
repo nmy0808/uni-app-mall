@@ -5,7 +5,7 @@
 			&#xe679;
 		</view>
 		<!-- #endif -->
-		<view class="comNavigationBack-cart iconfont">
+		<view class="comNavigationBack-cart iconfont" @click="handleToPageCart">
 			&#xe6af;
 		</view>
 	</view>
@@ -22,6 +22,11 @@
 		methods:{
 			handleBack(){
 				uni.navigateBack();
+			},
+			handleToPageCart(){
+				uni.switchTab({
+					url:'/pages/tabbar/cart/cart'
+				})
 			}
 		}
 	}

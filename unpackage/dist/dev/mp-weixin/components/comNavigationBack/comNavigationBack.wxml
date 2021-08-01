@@ -1,1 +1,1 @@
-<view class="comNavigationBack"><view class="comNavigationBack-cart iconfont"></view></view>
+<view class="comNavigationBack"><view data-event-opts="{{[['tap',[['handleToPageCart',['$event']]]]]}}" class="comNavigationBack-cart iconfont" bindtap="__e"></view></view>

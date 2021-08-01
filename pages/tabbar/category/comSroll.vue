@@ -1,7 +1,7 @@
 <template>
 	<view class="scroll">
 		<scroll-view class="scroll-menu" scroll-y="true" :style="{ height: calcScrollHeight }">
-			<view class="scroll-menu-item" :class="{ on: index === currentIndex }" v-for="(item, index) in data" :key="item.id" @click="handleChangeMenu(index)">{{ item.title }}</view>
+			<view class="scroll-menu-item" :class="{ on: index === currentIndex }" v-for="(item, index) in data" :key="index" @click="handleChangeMenu(index)">{{ item.title }}</view>
 		</scroll-view>
 		<scroll-view class="scroll-content" scroll-y="true" :style="{ height: calcScrollHeight }">
 			<view class="scroll-content-banner">
@@ -9,13 +9,14 @@
 					<image class="scroll-content-banner-img" :src="currentData.banner"></image>
 				</template>
 			</view>
-
 			<view class="scroll-content-main">
 				<template v-if="currentData">
-					<view class="scroll-content-main-item" v-for="item in currentData.list" :key="item.id" @click="handleToPage(item)">
-						<image class="scroll-content-main-item-img" :src="`/static/img/category/list/` + item.img"></image>
-						<view class="scroll-content-main-item-title">{{ item.name }}</view>
-					</view>
+					<template v-for="(item,index) in currentData.list" >
+						<view class="scroll-content-main-item" :key="index" @click="handleToPage(item)">
+							<image class="scroll-content-main-item-img" :src="`/static/img/category/list/` + item.img"></image>
+							<view class="scroll-content-main-item-title">{{ item.name }}</view>
+						</view>
+					</template>
 				</template>
 			</view>
 		</scroll-view>

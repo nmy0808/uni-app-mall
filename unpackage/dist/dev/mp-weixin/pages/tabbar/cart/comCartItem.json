@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "com-counter": "/components/comCounter/comCounter"
+  },
+  "component": true
+}

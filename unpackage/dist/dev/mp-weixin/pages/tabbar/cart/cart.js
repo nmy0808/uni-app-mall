@@ -128,20 +128,42 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-var _default =
-{
-  data: function data() {
-    return {};
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var comCartList = function comCartList() {__webpack_require__.e(/*! require.ensure | pages/tabbar/cart/comCartList */ "pages/tabbar/cart/comCartList").then((function () {return resolve(__webpack_require__(/*! ./comCartList */ 116));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
+
+
+
+
+
+
+{
+  name: 'cart',
+  components: { comCartList: comCartList },
+  data: function data() {
+    return {
+      cartData: [],
+      key: 1 };
 
   },
-  methods: {} };exports.default = _default;
+  methods: {
+    initDataCart: function initDataCart() {
+      var cartData = uni.getStorageSync('cart') || [];
+      cartData.map(function (it) {return it.selected = false;});
+      this.cartData = cartData;
+    },
+    handleChangeCart: function handleChangeCart(cartData) {
+      this.cartData = cartData;
+    },
+    handleDeleteCartItem: function handleDeleteCartItem(cartData) {
+      this.key = Math.floor(Math.random() * 1000);
+      this.cartData = cartData;
+      uni.setStorageSync('cart', this.cartData);
+    } },
+
+  onShow: function onShow() {
+    this.initDataCart();
+  } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ })
 

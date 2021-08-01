@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "com-cart-item": "/pages/tabbar/cart/comCartItem"
+  }
+}

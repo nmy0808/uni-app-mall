@@ -96,10 +96,10 @@ var components
 try {
   components = {
     comTabNav: function() {
-      return __webpack_require__.e(/*! import() | components/comTabNav/comTabNav */ "components/comTabNav/comTabNav").then(__webpack_require__.bind(null, /*! @/components/comTabNav/comTabNav.vue */ 116))
+      return __webpack_require__.e(/*! import() | components/comTabNav/comTabNav */ "components/comTabNav/comTabNav").then(__webpack_require__.bind(null, /*! @/components/comTabNav/comTabNav.vue */ 123))
     },
     comWaterfalls: function() {
-      return __webpack_require__.e(/*! import() | components/comWaterfalls/comWaterfalls */ "components/comWaterfalls/comWaterfalls").then(__webpack_require__.bind(null, /*! @/components/comWaterfalls/comWaterfalls.vue */ 123))
+      return __webpack_require__.e(/*! import() | components/comWaterfalls/comWaterfalls */ "components/comWaterfalls/comWaterfalls").then(__webpack_require__.bind(null, /*! @/components/comWaterfalls/comWaterfalls.vue */ 130))
     }
   }
 } catch (e) {
@@ -167,7 +167,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _interfaces = _interopRequireDefault(__webpack_require__(/*! @/utils/interfaces.js */ 21));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var comTabNav = function comTabNav() {__webpack_require__.e(/*! require.ensure | components/comTabNav/comTabNav */ "components/comTabNav/comTabNav").then((function () {return resolve(__webpack_require__(/*! @/components/comTabNav/comTabNav.vue */ 116));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var comWaterfalls = function comWaterfalls() {__webpack_require__.e(/*! require.ensure | components/comWaterfalls/comWaterfalls */ "components/comWaterfalls/comWaterfalls").then((function () {return resolve(__webpack_require__(/*! @/components/comWaterfalls/comWaterfalls.vue */ 123));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+var _interfaces = _interopRequireDefault(__webpack_require__(/*! @/utils/interfaces.js */ 21));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var comTabNav = function comTabNav() {__webpack_require__.e(/*! require.ensure | components/comTabNav/comTabNav */ "components/comTabNav/comTabNav").then((function () {return resolve(__webpack_require__(/*! @/components/comTabNav/comTabNav.vue */ 123));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var comWaterfalls = function comWaterfalls() {__webpack_require__.e(/*! require.ensure | components/comWaterfalls/comWaterfalls */ "components/comWaterfalls/comWaterfalls").then((function () {return resolve(__webpack_require__(/*! @/components/comWaterfalls/comWaterfalls.vue */ 130));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 {
