@@ -128,7 +128,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var comCartList = function comCartList() {__webpack_require__.e(/*! require.ensure | pages/tabbar/cart/comCartList */ "pages/tabbar/cart/comCartList").then((function () {return resolve(__webpack_require__(/*! ./comCartList */ 116));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var comCartList = function comCartList() {__webpack_require__.e(/*! require.ensure | pages/tabbar/cart/comCartList */ "pages/tabbar/cart/comCartList").then((function () {return resolve(__webpack_require__(/*! ./comCartList */ 116));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var comCartBar = function comCartBar() {__webpack_require__.e(/*! require.ensure | pages/tabbar/cart/comCartBar */ "pages/tabbar/cart/comCartBar").then((function () {return resolve(__webpack_require__(/*! ./comCartBar.vue */ 246));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
+
 
 
 
@@ -138,7 +140,7 @@ __webpack_require__.r(__webpack_exports__);
 
 {
   name: 'cart',
-  components: { comCartList: comCartList },
+  components: { comCartList: comCartList, comCartBar: comCartBar },
   data: function data() {
     return {
       cartData: [],
@@ -158,6 +160,9 @@ __webpack_require__.r(__webpack_exports__);
       this.key = Math.floor(Math.random() * 1000);
       this.cartData = cartData;
       uni.setStorageSync('cart', this.cartData);
+    },
+    handleSelectAll: function handleSelectAll(cartData) {
+      this.handleDeleteCartItem(cartData);
     } },
 
   onShow: function onShow() {

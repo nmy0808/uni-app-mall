@@ -2,6 +2,7 @@
   "navigationBarTitleText": "购物车",
   "enablePullDownRefresh": false,
   "usingComponents": {
-    "com-cart-list": "/pages/tabbar/cart/comCartList"
+    "com-cart-list": "/pages/tabbar/cart/comCartList",
+    "com-cart-bar": "/pages/tabbar/cart/comCartBar"
   }
 }
