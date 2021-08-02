@@ -3,11 +3,11 @@
 		<view class="comCartBar-sleectAll">
 			<view class="comCartBar-sleectAll-checkBox" @click="handleSelectAll" :class="{ on: isSelectAll }"></view>
 			<view @click="handleSelectAll">全选</view>
-			<view class="comCartBar-sleectAll-deleteAll" @click="handleDeleteAll">删除</view>
+			<view class="comCartBar-sleectAll-deleteAll" @click="handleDeleteAll" v-show="showDeleteBtn">删除</view>
 		</view>
 		<view class="comCartBar-sum">
 			合计:¥{{ sumPrice }}
-			<button class="comCartBar-sum-btn">结算{{ slelecedNum }}</button>
+			<button class="comCartBar-sum-btn" @click="handleToPageSettlement">结算{{ slelecedNum }}</button>
 		</view>
 	</view>
 </template>
@@ -42,6 +42,12 @@ export default {
 			});
 			return res;
 		}
+		,showDeleteBtn(){
+			return this.cartData.filter(it=>it.selected).length>0;
+		},
+		selectedGoods(){
+			return this.cartData.filter(it=>it.selected);
+		}
 	},
 	methods: {
 		handleSelectAll() {
@@ -61,6 +67,19 @@ export default {
 				copyData = copyData.filter(it => !it.selected);
 			}
 			this.$emit('change', copyData);
+		},
+		handleToPageSettlement(){
+			if(this.selectedGoods.length ===0){
+				uni.showToast({
+					icon: 'none',
+					title: '请至少选择一件商品'
+				})
+				return;
+			}
+			uni.setStorageSync('order',this.selectedGoods)
+			uni.navigateTo({
+				url:'/pages/goodOrder/goodOrder'
+			})
 		}
 	}
 };

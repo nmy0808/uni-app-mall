@@ -1,0 +1,1 @@
+<view><com-order-list vue-id="39826a1c-1" data="{{order}}" bind:__l="__l"></com-order-list></view>

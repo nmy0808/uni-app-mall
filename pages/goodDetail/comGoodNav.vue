@@ -60,6 +60,10 @@ export default {
 			})
 		},
 		handleBuy() {
+			uni.setStorageSync('order',[this.info]);
+			uni.navigateTo({
+				url:'/pages/goodOrder/goodOrder'
+			})
 			this.$emit('buy');
 		},
 		setStoreCart(data) {
