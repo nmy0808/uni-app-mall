@@ -24,8 +24,11 @@
 		{
 			"path": "pages/tabbar/user/user",
 			"style": {
-				"navigationBarTitleText": "个人中心",
-				"enablePullDownRefresh": false
+				"navigationBarTitleText": "我的",
+				"navigationBarBackgroundColor":"#e66071",
+				"navigationBarTextStyle":"white",
+				"enablePullDownRefresh": false,
+				"backgroundColorTop":"#e66071"
 			}
 
 		},
@@ -69,6 +72,15 @@
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "确认订单",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/userShare/userShare",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "我的二维码",
                 "enablePullDownRefresh": false
             }
             

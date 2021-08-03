@@ -1,0 +1,1 @@
+<view class="userShare data-v-c8a58420"><image class="userShare-img data-v-c8a58420" src="../../static/img/myCode.jpg" mode="widthFix"></image><view data-event-opts="{{[['tap',[['capture',['$event']]]]]}}" class="userShare-btn data-v-c8a58420" bindtap="__e">保存至相册</view><view class="bg data-v-c8a58420"></view></view>

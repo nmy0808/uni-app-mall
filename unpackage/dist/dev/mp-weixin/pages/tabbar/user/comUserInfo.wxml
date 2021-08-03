@@ -1,0 +1,1 @@
+<view class="comUserInfo"><view class="comUserInfo-avatar"><image class="comUserInfo-avatar-img" src="/static/img/face.jpg"></image><view class="comUserInfo-avatar-name">MingYan</view></view><view data-event-opts="{{[['tap',[['handleToPageShare',['$event']]]]]}}" class="comUserInfo-qrcode" bindtap="__e"><view class="icon iconfont"></view></view></view>

@@ -7,7 +7,8 @@
     "pages/goodList/goodList",
     "pages/goodDetail/goodDetail",
     "pages/goodRatings/goodRatings",
-    "pages/goodOrder/goodOrder"
+    "pages/goodOrder/goodOrder",
+    "pages/userShare/userShare"
   ],
   "subPackages": [],
   "window": {
@@ -47,6 +48,5 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap.json"
+  "usingComponents": {}
 }

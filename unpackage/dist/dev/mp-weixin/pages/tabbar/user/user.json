@@ -1,5 +1,10 @@
 {
-  "navigationBarTitleText": "个人中心",
+  "navigationBarTitleText": "我的",
+  "navigationBarBackgroundColor": "#e66071",
+  "navigationBarTextStyle": "white",
   "enablePullDownRefresh": false,
-  "usingComponents": {}
+  "backgroundColorTop": "#e66071",
+  "usingComponents": {
+    "com-user-info": "/pages/tabbar/user/comUserInfo"
+  }
 }

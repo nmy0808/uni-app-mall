@@ -1,1 +1,1 @@
-<view><block wx:if="{{currentViedoPath&&isShowVideo}}"><video id="myvideo" autoplay="{{true}}" src="{{currentViedoPath}}" controls="{{true}}" data-event-opts="{{[['fullscreenchange',[['handleCancelFullScreen',['$event']]]]]}}" muted="{{true}}" bindfullscreenchange="__e"></video></block><button type="default" data-event-opts="{{[['tap',[['paly',['$event']]]]]}}" bindtap="__e">播放</button></view>
+<view class="page-user data-v-5b91b497"><com-user-info vue-id="16a55f4f-1" class="data-v-5b91b497" bind:__l="__l"></com-user-info></view>
